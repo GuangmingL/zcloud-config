@@ -1,0 +1,26 @@
+﻿spring:
+  profiles:
+    active:
+      - dev
+---
+server: 
+  port: 8001
+spring: 
+  profiles: dev
+  application: 
+    name: zcloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1001.com:1001/eureka/
+---
+server: 
+  port: 8002
+spring: 
+  profiles: test
+  application: 
+    name: zcloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1001.com:1001/eureka/
